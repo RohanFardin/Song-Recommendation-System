@@ -14,16 +14,16 @@ This function is specifically applied to the features and artist. droppping non-
                  iii) Tokenization: Splits the text into individual words (tokens).<br>
                  iv) Stopword Removal: Removes common English stopwords (e.g., "the," "and", "or") to focus on meaningful words.<br>
                  v) Punctuation Removal: Filters out punctuation to retain only words.<br>
-                 vi) Stemming: Reduces words to their base or root form using the Porter Stemmer (e.g., "running" to "run").
+                 vi) Stemming: Reduce words to their base or root form using the Porter Stemmer (e.g., "running" to "run").
 This function is used for lyrics column.
 5. convert_to_list(value):<br> i) Uses ast.literal_eval to evaluate the string and convert it into a list.<br>
                            ii) If the conversion fails (e.g., due to malformed input), it safely returns an empty list instead of raising an exception.
 This function is used for feature, artist & modify_lyrics
 
 **Feature Engineering: Transformming raw data into features that can be used to train machine learning models.**
- 1. clean the 'lyrics' column by tokenizing, stemming, and removing stop words. This created a new, clean column called "modify_lyrics". [3(iii,iv,v,vi)]
- 2. created a new column, "combined" by concatenating the following text columns: "artist" and "features". 
- 3. created a new column, "combined_all" by concatenating the following text columns: "tag", "lyrics" and "combined". 
+ 1. Clean the 'lyrics' column by tokenizing, stemming, and removing stop words. This created a new, clean column called "modify_lyrics". [3(iii,iv,v,vi)]
+ 2. Created a new column, "combined" by concatenating the following text column: "artist" and "features". 
+ 3. Created a new column, "combined_all" by concatenating the following text columns: "tag", "lyrics" and "combined". 
 
  **Recommendation System:**
  1. Vectorization:<br> TfidfVectorizer is used to convert text data into numerical representations.<br>
@@ -45,10 +45,10 @@ This function is used for feature, artist & modify_lyrics
 
 
  **Dataset Details**
-the main dataset is collected from kaggle. This dataset contain information as recent as 2022 scraped from Genius, a place where people can upload and annotate songs, poems and even books (but mostly songs). It builds upon the 5 Million Song Lyrics Dataset by using models to identify the native language of each entry. here is the given link -
+The main dataset is collected from kaggle. This dataset contain information as recent as 2022 scraped from Genius, a place where people can upload and annotate songs, poems and even books (but mostly songs). It builds upon the 5 Million Song Lyrics Dataset by using models to identify the native language of each entry. here is the given link -
 https://www.kaggle.com/datasets/carlosgdcj/genius-song-lyrics-with-language-information
 
-i chunked the files into 600K+ data. the dataset file and pickle file is given below -
+I chunked the files into 600K+ data. the dataset file and pickle file is given below -
 https://drive.google.com/drive/folders/1F2ohOJ8C9gn9ajW2CrG8pfEm1N-9_U9l?usp=sharing
 
 
