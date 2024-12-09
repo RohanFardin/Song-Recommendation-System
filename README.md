@@ -9,7 +9,7 @@
                          ii) Applies .encode('utf-8').decode('utf-8', errors='ignore') to clean up any text with unusual or invalid characters by encoding and decoding it to UTF-8.
                          iii) This ensures that only valid text data is retained. Splits the cleaned string into a list using commas, strips spaces from each word, and removes internal spaces for uniform representation.
 This function is specifically applied to the features and artist. droppping non-English rows.
-3. modify(text): i) Expands contractions (e.g., "don't" to "do not") using the contractions library.
+3. modify(text): i) Expands contractions (e.g., "don't" to "do not") using the contractions library. <br>
                  ii) Noise Removal: Replaces newline characters and removes text within square brackets (e.g., [intro]).
                  iii) Tokenization: Splits the text into individual words (tokens).
                  iv) Stopword Removal: Removes common English stopwords (e.g., "the," "and", "or") to focus on meaningful words
