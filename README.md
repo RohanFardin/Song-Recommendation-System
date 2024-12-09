@@ -1,8 +1,8 @@
 # Song-Recommendation-System
 **Description:** This project builds a song recommendation system using Python and machine learning techniques, specifically leveraging TF-IDF and cosine similarity for song recommendations. The code includes comprehensive data preprocessing and feature engineering steps to prepare the dataset for analysis. It focuses on enhancing the data quality and preparing it to be used in recommendation models.
 
-**Feature:**
 
+**Feature:**
 **Data Preprocessing: Cleaning and preparing the dataset by removing unnecessary columns, handling missing values, and formatting features.**
 1. Cleaning & Handling unnecessary values: Unnecessary columns ('views', 'language_cld3', 'language_ft') are dropped to streamline the dataset. Rows with missing data are removed using the .drop() function, specifying the axis=0 to operate on rows and inplace=True to modify the DataFrame directly.
 2. clean_feature(value): i) Uses re.sub(r'[{}()"]', '', value) to remove extra characters like {}, (), and quotation marks ("), which are not useful for analysis.
@@ -41,6 +41,42 @@ This function is used for feature, artist & modify_lyrics
                   songs_list = sorted(list(enumerate(distances)), reverse=True, key=lambda x: x[1])[:11]:
                   Enumerates the distances list and sorts it in descending order based on the similarity scores.
                   Selects the top 10 songs (along with their indices) that are most similar to the input song, including the input song itself.
+
+
+
+ **Dataset Details**
+the main dataset is collected from kaggle. This dataset contain information as recent as 2022 scraped from Genius, a place where people can upload and annotate songs, poems and even books (but mostly songs). It builds upon the 5 Million Song Lyrics Dataset by using models to identify the native language of each entry. here is the given link -
+https://www.kaggle.com/datasets/carlosgdcj/genius-song-lyrics-with-language-information
+
+i chunked the files into 600K+ data. the dataset file and pickle file is given below -
+https://drive.google.com/drive/folders/1F2ohOJ8C9gn9ajW2CrG8pfEm1N-9_U9l?usp=sharing
+
+
+**Project Workflow**
+Provide a step-by-step breakdown of the project's workflow:
+1. Load the dataset.
+2. Preprocess the data (column removal, cleaning, handling missing values).
+3. Apply feature extraction techniques.
+4. Build the recommendation system using similarity measures.
+If you want to run it on Streamlit. Please follow these steps
+**i) Download the pickle file provided in the "Dataset Details" section above.**
+**ii) Open a terminal and navigate to the directory containing the pickle file and app.py. Then, type ``streamlit run app.py.``**
+**iii) Once the app launches, you will be able to select a song from the interface.**
+
+
+**Liabraries Used**
+Pandas: Data manipulation and cleaning
+NumPy: Numerical operations and array manipulation
+NLTK: Natural language processing tasks (tokenization, stemming, stop word removal)
+Scikit-learn: Machine learning algorithms, including TF-IDF vectorization and cosine similarity
+AST: Safe evaluation of Python expressions
+Contractions: Expanding contractions in text
+re: Regular expressions for text pattern matching and replacement
+
+
+
+
+
 
 
    
