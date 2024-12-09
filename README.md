@@ -71,7 +71,7 @@ NLTK: Natural language processing tasks (tokenization, stemming, stop word remov
 Scikit-learn: Machine learning algorithms, including TF-IDF vectorization and cosine similarity<br>
 AST: Safe evaluation of Python expressions<br>
 Contractions: Expanding contractions in text<br>
-re: Regular expressions for text pattern matching and replacement
+RE: Regular expressions for text pattern matching and replacement
 
 
 
