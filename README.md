@@ -1,2 +1,3 @@
 # Song-Recommendation-System
-A machine learning repository dedicated to building a song recommendation system using TF-IDF and cosine similarity. Includes preprocessing, feature engineering, and implementation steps to recommend songs based on artists, genres, and lyrics.
+Description: This project builds a song recommendation system using Python and machine learning techniques, specifically leveraging TF-IDF and cosine similarity for song recommendations. The code includes comprehensive data preprocessing and feature engineering steps to prepare the dataset for analysis. It focuses on enhancing the data quality and preparing it to be used in recommendation models.
+
