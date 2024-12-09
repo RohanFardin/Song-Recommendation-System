@@ -9,14 +9,14 @@
                          ii) Applies .encode('utf-8').decode('utf-8', errors='ignore') to clean up any text with unusual or invalid characters by encoding and decoding it to UTF-8.
                          iii) This ensures that only valid text data is retained. Splits the cleaned string into a list using commas, strips spaces from each word, and removes internal spaces for uniform representation.
 This function is specifically applied to the features and artist. droppping non-English rows.
-3. modify(text): i) Expands contractions (e.g., "don't" to "do not") using the contractions library. <br>
-                 ii) Noise Removal: Replaces newline characters and removes text within square brackets (e.g., [intro]).
-                 iii) Tokenization: Splits the text into individual words (tokens).
-                 iv) Stopword Removal: Removes common English stopwords (e.g., "the," "and", "or") to focus on meaningful words
-                 v) Punctuation Removal: Filters out punctuation to retain only words.
+3. modify(text):<br> i) Expands contractions (e.g., "don't" to "do not") using the contractions library.<br>
+                 ii) Noise Removal: Replaces newline characters and removes text within square brackets (e.g., [intro]).<br>
+                 iii) Tokenization: Splits the text into individual words (tokens).<br>
+                 iv) Stopword Removal: Removes common English stopwords (e.g., "the," "and", "or") to focus on meaningful words.<br>
+                 v) Punctuation Removal: Filters out punctuation to retain only words.<br>
                  vi) Stemming: Reduces words to their base or root form using the Porter Stemmer (e.g., "running" to "run").
 This function is used for lyrics column.
-5. convert_to_list(value): i) Uses ast.literal_eval to evaluate the string and convert it into a list.
+5. convert_to_list(value):<br> i) Uses ast.literal_eval to evaluate the string and convert it into a list.<br>
                            ii) If the conversion fails (e.g., due to malformed input), it safely returns an empty list instead of raising an exception.
 This function is used for feature, artist & modify_lyrics
 
@@ -26,9 +26,9 @@ This function is used for feature, artist & modify_lyrics
  3. created a new column, "combined_all" by concatenating the following text columns: "tag", "lyrics" and "combined". 
 
  **Recommendation System:**
- 1. Vectorization: TfidfVectorizer is used to convert text data into numerical representations.
-                  max_features=7000 limits the vocabulary size to the top 7000 most frequent words.
-                  stop_words='english' removes common English stop words.
+ 1. Vectorization:<br> TfidfVectorizer is used to convert text data into numerical representations.<br>
+                  max_features=7000 limits the vocabulary size to the top 7000 most frequent words.<br>
+                  stop_words='english' removes common English stop words.<br>
                   The vector variable stores the TF-IDF matrix.
 2. Recommendation:
                   **song_index = df[df['title'] == song].index[0]:
@@ -58,19 +58,19 @@ Provide a step-by-step breakdown of the project's workflow:
 2. Preprocess the data (column removal, cleaning, handling missing values).
 3. Apply feature extraction techniques.
 4. Build the recommendation system using similarity measures.
-If you want to run it on Streamlit. Please follow these steps
-**i) Download the pickle file provided in the "Dataset Details" section above.**
-**ii) Open a terminal and navigate to the directory containing the pickle file and app.py. Then, type ``streamlit run app.py.``**
+If you want to run it on Streamlit. Please follow these steps<br>
+**i) Download the pickle file provided in the "Dataset Details" section above.**<br>
+**ii) Open a terminal and navigate to the directory containing the pickle file and app.py. Then, type ``streamlit run app.py.``**<br>
 **iii) Once the app launches, you will be able to select a song from the interface.**
 
 
-**Liabraries Used**
-Pandas: Data manipulation and cleaning
-NumPy: Numerical operations and array manipulation
-NLTK: Natural language processing tasks (tokenization, stemming, stop word removal)
-Scikit-learn: Machine learning algorithms, including TF-IDF vectorization and cosine similarity
-AST: Safe evaluation of Python expressions
-Contractions: Expanding contractions in text
+**Liabraries Used**<br>
+Pandas: Data manipulation and cleaning<br>
+NumPy: Numerical operations and array manipulation<br>
+NLTK: Natural language processing tasks (tokenization, stemming, stop word removal)<br>
+Scikit-learn: Machine learning algorithms, including TF-IDF vectorization and cosine similarity<br>
+AST: Safe evaluation of Python expressions<br>
+Contractions: Expanding contractions in text<br>
 re: Regular expressions for text pattern matching and replacement
 
 
