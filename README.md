@@ -2,7 +2,7 @@
 **Description:** This project builds a song recommendation system using Python and machine learning techniques, specifically leveraging TF-IDF and cosine similarity for song recommendations. The code includes comprehensive data preprocessing and feature engineering steps to prepare the dataset for analysis. It focuses on enhancing the data quality and preparing it to be used in recommendation models.
 
 
-**Feature:**
+**Feature:**<br>
 **Data Preprocessing: Cleaning and preparing the dataset by removing unnecessary columns, handling missing values, and formatting features.**
 1. Cleaning & Handling unnecessary values: Unnecessary columns ('views', 'language_cld3', 'language_ft') are dropped to streamline the dataset. Rows with missing data are removed using the .drop() function, specifying the axis=0 to operate on rows and inplace=True to modify the DataFrame directly.
 2. clean_feature(value): i) Uses re.sub(r'[{}()"]', '', value) to remove extra characters like {}, (), and quotation marks ("), which are not useful for analysis.
@@ -25,7 +25,7 @@ This function is used for feature, artist & modify_lyrics
  2. Created a new column, "combined" by concatenating the following text column: "artist" and "features". 
  3. Created a new column, "combined_all" by concatenating the following text columns: "tag", "lyrics" and "combined". 
 
- **Recommendation System:**
+ **Recommendation System:**<br>
  1. Vectorization:<br> TfidfVectorizer is used to convert text data into numerical representations.<br>
                   max_features=7000 limits the vocabulary size to the top 7000 most frequent words.<br>
                   stop_words='english' removes common English stop words.<br>
@@ -44,7 +44,7 @@ This function is used for feature, artist & modify_lyrics
 
 
 
- **Dataset Details**
+**Dataset Details:**<br>
 The main dataset is collected from kaggle. This dataset contain information as recent as 2022 scraped from Genius, a place where people can upload and annotate songs, poems and even books (but mostly songs). It builds upon the 5 Million Song Lyrics Dataset by using models to identify the native language of each entry. here is the given link -
 https://www.kaggle.com/datasets/carlosgdcj/genius-song-lyrics-with-language-information
 
@@ -52,7 +52,7 @@ I chunked the files into 600K+ data. the dataset file and pickle file is given b
 https://drive.google.com/drive/folders/1F2ohOJ8C9gn9ajW2CrG8pfEm1N-9_U9l?usp=sharing
 
 
-**Project Workflow**
+**Project Workflow:**<br>
 Provide a step-by-step breakdown of the project's workflow:
 1. Load the dataset.
 2. Preprocess the data (column removal, cleaning, handling missing values).
