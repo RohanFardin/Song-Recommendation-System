@@ -3,7 +3,7 @@
 
 
 **Feature:**<br>
-**Data Preprocessing: Cleaning and preparing the dataset by removing unnecessary columns, handling missing values, and formatting features.**
+**Data Preprocessing: Cleaning and preparing the dataset by removing unnecessary columns, handling missing values, and formatting features.**<br>
 1. Cleaning & Handling unnecessary values: Unnecessary columns ('views', 'language_cld3', 'language_ft') are dropped to streamline the dataset. Rows with missing data are removed using the .drop() function, specifying the axis=0 to operate on rows and inplace=True to modify the DataFrame directly.
 2. clean_feature(value): i) Uses re.sub(r'[{}()"]', '', value) to remove extra characters like {}, (), and quotation marks ("), which are not useful for analysis.
                          ii) Applies .encode('utf-8').decode('utf-8', errors='ignore') to clean up any text with unusual or invalid characters by encoding and decoding it to UTF-8.
